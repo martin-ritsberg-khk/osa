@@ -1,0 +1,250 @@
+    1  su root
+    2  ip -a
+    3  ip a
+    4  su root
+    5  su- root
+    6  su root
+    7  ls
+    8  apt install git
+    9  su
+   10  wget http://githowto.com/git_tutorial.zip
+   11  uzip
+   12  unzip
+   13  su
+   14  ls
+   15  unzip git_tutorial.zip
+   16  ls
+   17  cd git_tutorial
+   18  ls
+   19  cd work
+   20  mkdir hello
+   21  cd hello
+   22  touch hello.html
+   23  echo "Hello, World!"
+   24  echo "Hello, World!" >> hello.html
+   25  git init
+   26  git add hello.html
+   27  git commit -m "First Commit"
+   28  git config --gobal user.email "martin.ritsberg@khk.ee"
+   29  git config --global user.email "martin.ritsberg@khk.ee"
+   30  git config --global user.name "martin-ritsberg-khk"
+   31  git commit -m "First Commit"
+   32  git status
+   33  ls
+   34  cat hello.html
+   35  nano hello.html
+   36  ls
+   37  git status
+   38  git add hello.html
+   39  git status
+   40  git commit
+   41  git status
+   42  nano hellow.html
+   43  nano hello.html
+   44  git add hellow.html
+   45  git add hello.html
+   46  nano hello.html
+   47  git status
+   48  git commint -m "Added standard HTML page tags"
+   49  git commit -m "Added standard HTML page tags"
+   50  git status
+   51  git add .
+   52  git status
+   53  git commit -m "Added HTML header"
+   54  git log
+   55  git log --pretty=oneline
+   56  git log --pretty=oneline --all
+   57  git log --pretty=oneline --since='10 minutes ago'
+   58  git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+   59  git hist
+   60  ~
+   61  cd ~
+   62  nano .gitconfig
+   63  cd -
+   64  git hist
+   65  cd ~
+   66  nano .gitconfig
+   67  cd -
+   68  git hist
+   69  git checkout 538154e
+   70  cat hello.html
+   71  git checkout master
+   72  cat hello.html
+   73  git tag v1
+   74  git checkout v1^
+   75  cat hello.html
+   76  git tag v1-beta
+   77  git checkout v1
+   78  git checkout v1-beta
+   79  git checkout v1
+   80  git tag
+   81  git hist master --all
+   82  git checkout master
+   83  nano hello.html
+   84  git status
+   85  git checkout hello.html
+   86  git status
+   87  cat hello.html
+   88  nano hello.html
+   89  git add hello.html
+   90  git status
+   91  git reset HEAD hello.html
+   92  git checkout hello.html
+   93  git status
+   94  cat hello.thml
+   95  cat hello.html
+   96  nano hello.html
+   97  git add hello.thml
+   98  git add hello.html
+   99  git commit -m "oops"
+  100  git revert HEAD
+  101  git hist
+  102  git reset --hard v1
+  103  git hist
+  104  git hist --all
+  105  git -d oops
+  106  git tag -d oops
+  107  git hist --all
+  108  nano hello.html
+  109  git add hello.html
+  110  git commit -m "Add an author comment"
+  111  git add hello.html
+  112  nano hello.html
+  113  git add hello.html
+  114  git commit --amend -m "Add an aithor/email comment"
+  115  git hist
+  116  mkdir lib
+  117  git mv hello.html lib
+  118  git status
+  119  git commit -m "Moved hello.html to lib"
+  120  nano index.html
+  121  git add index.html
+  122  git commit -m "Added index.html"
+  123  ls -C .gt
+  124  ls -C .git
+  125  ls -C .git/objects
+  126  ls -C .git/objects/36
+  127  cat .gt/config
+  128  cat .git/config
+  129  ls .git/refs
+  130  ls .git/refs/heads
+  131  ls .git/refs/tags
+  132  ls .git/refs/tags/v1
+  133  cat .git/refs/tags/v1
+  134  cat .git/HEAD
+  135  git hist --max-count=1
+  136  git cat-file -t abc82a8
+  137  git cat-file -p abc82a8
+  138  git cat-file -p 096b74c
+  139  git cat-file -p 51760a2
+  140  git cat-file -p 71d233c
+  141  git cat-file -p 7d9ad17
+  142  git checkout -b style
+  143  git status
+  144  touch lib/style.css
+  145  nano lib/style.css
+  146  git add lib/style.css
+  147  cit commit -m "Added css stylesheet"
+  148  git commit -m "Added css stylesheet"
+  149  nano lib/hello.thml
+  150  nano lib/hello.html
+  151  git add l
+  152  git commit -m "Hello uses style.css"
+  153  nano index.html
+  154  git add index.html
+  155  git commit -m "Updated index.html"
+  156  git hist --all
+  157  git checkout master
+  158  cat lib/hello.html
+  159  git checkout style
+  160  cat lib/hello.html
+  161  git checkout master
+  162  nano README
+  163  git add README
+  164  git commit -m "Added README"
+  165  git hist --all
+  166  git checkout style
+  167  git merge master
+  168  Y
+  169  git hist --all
+  170  git hist
+  171  git hist --all
+  172  nano lib/hello.html
+  173  git add lib/hello.html
+  174  git commit -m "Life is gud"
+  175  git hist --all
+  176  git checkout style
+  177  git merge master
+  178  nano lib/hello.html
+  179  git add lib/hello.html
+  180  git commit -m "Merged master fixed conflict"
+  181  git hist --all
+  182  git checkout style
+  183  git hist
+  184  git reset --hard 7731972
+  185  git hist --all
+  186  git checkout master
+  187  git hist
+  188  git reset --hard 19af491
+  189  git hist --all
+  190  git checkout style
+  191  git rebase master
+  192  git hist
+  193  git checkout master
+  194  git merge style
+  195  git hist
+  196  cd ..
+  197  pwd
+  198  ls
+  199  git clone hello cloned_hello
+  200  cd cloned_hello
+  201  ls
+  202  git hist --all
+  203  git remote
+  204  git remote show orgin
+  205  git remote show origin
+  206  git branch
+  207  git branch -a
+  208  cd ../hello
+  209  nano README
+  210  git add README
+  211  git commit -m "Changed README in original repo"
+  212  cd ../cloned_hello
+  213  git fetch
+  214  git hist --all
+  215  cat README
+  216  git merge origin/master
+  217  cat README
+  218  git branch --track style origin/style
+  219  git branch
+  220  git hist --max-count=2
+  221  cd ..
+  222  git clone --bare hello hello.git
+  223  ls hello.git
+  224  cd hello
+  225  git remote add shared ../hello.git
+  226  nano README
+  227  git push shared master
+  228  git checkout master
+  229  cat README
+  230  cat commit -m "Added shared comment to readme"
+  231  git push shared master
+  232  git commit -m "Added shared comment to readme"
+  233  git add README
+  234  git commit -m "Added shared comment to readme"
+  235  git push shared master
+  236  cd ../cloned_hello
+  237  git remote add shared ../hello.git
+  238  git branch --trach shared master
+  239  git branch --track shared master
+  240  git pull shared master
+  241  cat README
+  242  cd ..
+  243  git daemon --verbose --export-all --base-path=.
+  244  cd hello
+  245  git remote add origin https://github.com/martin-ritsberg-khk/osa.git
+  246  git remote -v
+  247  git push origin master
+  248  ls
+  249  cd git_tutorial/work/hello
+  250  history >> history.txt
